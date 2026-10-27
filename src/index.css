@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Neo-brutalist tactile hard shadows */
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0px 0px #191A23;
+}
+
+.shadow-brutal {
+  box-shadow: 4px 4px 0px 0px #191A23;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0px 0px #191A23;
+}
+
+.shadow-brutal-lime {
+  box-shadow: 4px 4px 0px 0px #B9FF66;
+}
+
+.shadow-brutal-dark {
+  box-shadow: 4px 4px 0px 0px #262626;
+}
+
+/* Flight Spec theme utilities */
+.flight-border {
+  border-color: #262626;
+}
+
+.flight-bg-card {
+  background-color: #111111;
+}
+
+.flight-bg-panel {
+  background-color: #0A0A0A;
+}

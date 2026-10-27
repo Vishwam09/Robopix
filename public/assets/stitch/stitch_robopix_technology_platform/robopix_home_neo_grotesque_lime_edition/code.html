@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="en" __gcrremoteframetoken="001870ad0d2dd514e935374e6f257b00"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+    }
+    ::-webkit-scrollbar { display:none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "dark-charcoal": "#191A23",
+            "neon-lime": "#B9FF66",
+            "light-bg": "#F4F4F4",
+            "soft-gray": "#F3F3F3",
+            "border-dark": "#191A23",
+            "text-muted": "#555866",
+            "surface-pure": "#FFFFFF",
+            "primary": "#191A23",
+            "primary-container": "#B9FF66",
+            "surface": "#FFFFFF",
+            "on-surface": "#191A23",
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "2xl": "1.5rem",
+            "3xl": "2.25rem",
+            "4xl": "2.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline": ["Space Grotesk", "sans-serif"],
+            "mono": ["Space Mono", "monospace"],
+            "body": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface-pure font-body text-dark-charcoal antialiased selection:bg-neon-lime selection:text-dark-charcoal">
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border-dark/10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3 group" data-path="home" href="#">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTCp-J4nNFTlBf66Ahxe9BlG7eUFDs90mAaZIYndNsrbN4q0RT-3OHswdQRhWCgvHH1Cc0ux73nrT2s0vpQJnGNHI4ZRGPEa891bOJNDwImMSfFv0uihLS7YdYhEz485oyPqJSVzAHnPWxyh28tE-Dew86pYJYYz502Te2UdmShr-1tuKcK90bNZ-JdQZQ33FgcnJoYH2QPZgQMXc9V5n0rzdTgdkfnh-0hDIHJHRtp4A0jSt1gD02bWQEA1kYTVWaRQ" alt="ROBOPIX Logo" class="h-9 w-9 rounded-xl object-contain border border-dark-charcoal bg-white p-0.5">
+<span class="font-display text-2xl uppercase text-dark-charcoal tracking-wider font-bold">ROBOPIX</span>
+<span class="hidden xl:inline-block font-mono text-xs text-text-muted uppercase">// BEYOND THE POSSIBLE</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-1 font-display font-medium text-sm text-dark-charcoal" data-active-classes="bg-dark-charcoal text-white rounded-full">
+<a aria-current="page" class="px-4 py-2 bg-dark-charcoal text-white rounded-full transition-all" data-path="home" href="#">Home</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="about-projects" href="#">About &amp; Projects</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="services" href="#">Services</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="solutions" href="#">Solutions</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="process" href="#">Process</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="faq" href="#">FAQ</a>
+<a class="px-4 py-2 text-dark-charcoal hover:bg-soft-gray rounded-full transition-all" data-path="contact" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center px-5 py-2.5 bg-neon-lime text-dark-charcoal font-display font-bold text-sm rounded-full border border-dark-charcoal shadow-[2px_2px_0px_0px_#191A23] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#191A23] transition-all" data-path="consultation-booking" href="#">
+<span class="">[BOOK CONSULT]</span>
+</a>
+<a class="hidden sm:inline-flex px-4 py-2 font-display text-sm font-semibold text-dark-charcoal hover:text-dark-charcoal/70 transition-colors" data-path="login" href="#">Sign In</a>
+<div class="relative group">
+<div class="w-10 h-10 rounded-full border border-dark-charcoal bg-white flex items-center justify-center cursor-pointer hover:bg-soft-gray transition-colors">
+<span class="material-symbols-outlined text-dark-charcoal text-[20px]">person</span>
+</div>
+<div class="absolute right-0 mt-2 w-64 bg-white border-2 border-dark-charcoal rounded-2xl p-3 hidden group-hover:block z-50 shadow-[4px_4px_0px_0px_#191A23]">
+<div class="font-mono text-[10px] text-text-muted uppercase px-2 py-1 mb-1 font-bold">AUTH SESSION // ACTIVE</div>
+<a class="block px-3 py-2 font-display text-sm font-semibold text-dark-charcoal hover:bg-neon-lime rounded-xl transition-colors" data-path="user-dashboard" href="#">User Dashboard</a>
+<a class="block px-3 py-2 font-display text-sm font-semibold text-dark-charcoal hover:bg-neon-lime rounded-xl transition-colors" data-path="consultation-history" href="#">Consultation History</a>
+<a class="block px-3 py-2 font-display text-sm font-semibold text-dark-charcoal hover:bg-neon-lime rounded-xl transition-colors" data-path="admin-portal" href="#">Admin Portal</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-white">
+<div class="flex flex-col w-full">
+<!-- SECTION: HERO INTERACTIVE INSTRUMENTATION CLUSTER -->
+<section class="relative w-full max-w-7xl mx-auto px-6 lg:px-12 py-10 lg:py-16">
+<!-- Telemetry System Rail -->
+<div class="w-full flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-border-dark/15 mb-8">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs font-bold text-dark-charcoal bg-neon-lime border border-dark-charcoal px-3 py-1 rounded-full">ROBOPIX // SYS-V4.9</span>
+<span class="font-mono text-xs text-text-muted tracking-wider uppercase font-semibold">AEROSPACE &amp; AI SYSTEMS PORTAL</span>
+</div>
+<div class="flex items-center gap-4 font-mono text-xs text-text-muted">
+<span class="hidden md:inline">LAT: 12.9716°N / LON: 77.5946°E</span>
+<span class="inline-flex items-center gap-1.5 font-bold text-dark-charcoal">
+<span class="w-2 h-2 rounded-full bg-neon-lime border border-dark-charcoal animate-ping"></span>
+              CORE_ONLINE
+            </span>
+<span class="">CLK: <span class="font-bold text-dark-charcoal" id="system-live-clock">05:35:16 UTC</span></span>
+</div>
+</div>
+<!-- Main Grid Matrix: Neo-Grotesque Hero Deck -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left Column: Typography Engine & Operational Triggers -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-8">
+<div class="flex flex-col space-y-5">
+<div class="inline-flex items-center gap-2">
+<span class="font-mono text-xs uppercase px-3 py-1 bg-dark-charcoal text-neon-lime rounded-full font-bold">[PROTOCOL_INIT // SPEC-01]</span>
+<span class="font-mono text-xs text-text-muted font-semibold">// VISHWAM PATEL RESEARCH UNIT</span>
+</div>
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-dark-charcoal font-bold leading-[1.08]">
+                BEYOND THE <span class="bg-neon-lime px-2 rounded-lg border border-dark-charcoal inline-block">POSSIBLE.</span>
+</h1>
+<p class="font-body text-base lg:text-lg text-text-muted max-w-xl leading-relaxed">
+                Engineering intelligent solutions for a smarter future. Architecting mission-critical intelligence, self-navigating robotics, and industrial hardware architectures from raw silicon to autonomous production.
+              </p>
+</div>
+<!-- Key Operational CTAs (Positivus neo-grotesque style) -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3.5 bg-dark-charcoal text-white font-display font-bold text-sm uppercase rounded-2xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#B9FF66] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#B9FF66] transition-all flex items-center gap-2 group" data-path="services" href="#">
+<span class="">EXPLORE SERVICES</span>
+<span class="w-7 h-7 rounded-full bg-neon-lime text-dark-charcoal flex items-center justify-center font-bold text-sm">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+<a class="px-6 py-3.5 bg-white text-dark-charcoal font-display font-bold text-sm uppercase rounded-2xl border-2 border-dark-charcoal shadow-[3px_3px_0px_0px_#191A23] hover:bg-neon-lime hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#191A23] transition-all" data-path="about-projects" href="#">
+<span class="">VIEW ABOUT</span>
+</a>
+<a class="px-5 py-3.5 text-text-muted font-display font-semibold text-sm uppercase tracking-wider hover:text-dark-charcoal transition-all" data-path="consultation-booking" href="#">
+<span class="">[START A PROJECT]</span>
+</a>
+</div>
+<!-- System Footnote Readout Table in Neo-card styling -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+<div class="p-4 rounded-2xl bg-soft-gray border border-border-dark/15 flex flex-col justify-between"><div class="flex items-center justify-between"><span class="font-mono text-[10px] text-text-muted uppercase tracking-wider font-bold">CHIEF ARCHITECT</span><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuALZes-WTNxSGbq-lKPMkKb8mbQTq12WY2Uq-lJafR9M_Wc22XJb4fv5CAd3bQU0b30pv2cvDQ2NVeSVitPljUN84d_0jL_jw-hxp2ONzfiRTxOrUJbh-2InYc7G_yqEbzDqEbruI_Xac-ljk4VZmyD2vWXMrYKQatecGIsqF_nthZextdpy_Lxs0x3LG7aOZmasd7ZiJmfNblxUGBUOaaXUgQzsn-oR9Z4_xJEN3rhjXcCfNL67w8OjDb0bHHZ1KFV2g" alt="Vishwam Patel" class="w-7 h-7 rounded-full object-cover border border-dark-charcoal"></div><span class="font-display text-sm text-dark-charcoal font-bold uppercase mt-1">Vishwam Patel</span></div>
+<div class="p-4 rounded-2xl bg-soft-gray border border-border-dark/15 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-text-muted uppercase tracking-wider font-bold">CORE PILLARS</span>
+<span class="font-display text-sm text-dark-charcoal font-bold uppercase mt-1">AI, Automation &amp; Embedded</span>
+</div>
+<div class="p-4 rounded-2xl bg-neon-lime/30 border border-dark-charcoal flex flex-col justify-between">
+<span class="font-mono text-[10px] text-dark-charcoal uppercase tracking-wider font-bold">DIRECT DISPATCH</span>
+<a class="font-mono text-xs text-dark-charcoal hover:underline font-bold uppercase mt-1" href="tel:+919510477366">+91 9510477366</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Real-time Telemetry Geometric Canvas in Neo-Grotesque card -->
+<div class="lg:col-span-5 relative bg-white border-2 border-dark-charcoal rounded-3xl p-6 flex flex-col justify-between overflow-hidden cursor-crosshair min-h-[420px] shadow-[6px_6px_0px_0px_#191A23]" id="interactive-schematic-module">
+<!-- Corner Reticle Indicators -->
+<div class="absolute top-3 left-4 font-mono text-[10px] text-text-muted select-none font-bold">+0.0 // CALIB</div>
+<div class="absolute top-3 right-4 font-mono text-[10px] text-text-muted select-none font-bold">TRG-X // 01</div>
+<div class="absolute bottom-3 left-4 font-mono text-[10px] text-text-muted select-none font-bold">VECTOR: ACTIVE</div>
+<div class="absolute bottom-3 right-4 font-mono text-[10px] text-dark-charcoal font-bold bg-neon-lime px-2 py-0.5 rounded select-none">CALIB_OK</div>
+<!-- Telemetry Status Bar -->
+<div class="flex items-center justify-between text-dark-charcoal z-10 pt-4">
+<span class="font-mono text-xs text-dark-charcoal uppercase tracking-wider font-bold bg-soft-gray px-2.5 py-1 rounded-lg border border-border-dark/20">[SIM: DUAL-AXIS GYRO V9]</span>
+<span class="font-mono text-xs text-dark-charcoal font-bold" id="tracker-coords">X: 524 | Y: 218 | Z: 91.0</span>
+</div>
+<!-- Procedural Geometric Schematic SVG -->
+<div class="relative w-full my-auto py-4 flex items-center justify-center">
+<svg class="w-full h-56 max-w-sm text-dark-charcoal transition-transform duration-200 ease-out" fill="none" id="schematic-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Calibration Rings -->
+<circle cx="200" cy="150" r="110" stroke="#191A23" stroke-dasharray="3 5" stroke-opacity="0.25"></circle>
+<circle cx="200" cy="150" r="80" stroke="#191A23" stroke-opacity="0.3"></circle>
+<circle cx="200" cy="150" r="45" stroke="#191A23" stroke-opacity="0.5"></circle>
+<circle cx="200" cy="150" fill="#191A23" r="15" stroke="#B9FF66" stroke-width="3"></circle>
+<!-- Orthogonal Crosshairs -->
+<line stroke="#191A23" stroke-dasharray="4 4" stroke-opacity="0.3" x1="50" x2="350" y1="150" y2="150"></line>
+<line stroke="#191A23" stroke-dasharray="4 4" stroke-opacity="0.3" x1="200" x2="200" y1="30" y2="270"></line>
+<!-- Polygonal Sensor Gimbal Simulation -->
+<polygon fill="#B9FF66" fill-opacity="0.12" id="schematic-poly" points="200,60 280,110 280,190 200,240 120,190 120,110" stroke="#191A23" stroke-width="2"></polygon>
+<polygon fill="none" points="200,90 250,125 250,175 200,210 150,175 150,125" stroke="#191A23" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<!-- Target Dynamic Vector Points -->
+<circle cx="280" cy="110" fill="#B9FF66" id="beacon-node" r="6" stroke="#191A23" stroke-width="2"></circle>
+<circle cx="120" cy="190" fill="#191A23" r="4"></circle>
+<line stroke="#191A23" stroke-dasharray="3 3" stroke-width="1.5" x1="200" x2="280" y1="150" y2="110"></line>
+<!-- Coordinate Text Markings -->
+<text fill="#555866" font-family="Space Mono" font-size="8" font-weight="700" x="210" y="75">THETA_MAX: 44.8°</text>
+<text fill="#555866" font-family="Space Mono" font-size="8" font-weight="700" x="210" y="235">REF_SERVO_OK</text>
+<text fill="#555866" font-family="Space Mono" font-size="8" font-weight="700" x="65" y="145">ALPHA_NODE</text>
+</svg>
+</div>
+<!-- Telemetry Bottom Readout Module -->
+<div class="z-10 grid grid-cols-3 gap-2 bg-soft-gray p-2.5 rounded-2xl border border-border-dark/15 text-center font-mono pb-2">
+<div class="flex flex-col">
+<span class="text-[9px] text-text-muted uppercase font-bold">IMU ROLL</span>
+<span class="text-xs text-dark-charcoal font-bold" id="imu-roll">+0.12°</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-text-muted uppercase font-bold">PITCH DELTA</span>
+<span class="text-xs text-dark-charcoal font-bold" id="imu-pitch">-0.04°</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-text-muted uppercase font-bold">TELEMETRY</span>
+<span class="text-xs text-dark-charcoal font-bold bg-neon-lime rounded px-1">100% LOCK</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: ARCHITECTURAL PILLARS / CAPABILITIES MATRIX -->
+<section class="w-full bg-light-bg py-16 lg:py-20 border-y border-border-dark/15">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Header Block styled like reference badge + title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-neon-lime text-dark-charcoal font-display font-bold text-2xl lg:text-3xl px-4 py-1 rounded-xl border border-dark-charcoal shadow-[2px_2px_0px_0px_#191A23]">
+                Capabilities
+              </span>
+<h2 class="font-display text-2xl lg:text-3xl text-dark-charcoal font-bold uppercase tracking-tight">
+                Turn ideas into practical, intelligent technology.
+              </h2>
+</div>
+<p class="font-body text-sm text-text-muted max-w-sm leading-relaxed">
+              Eliminating operational overhead by combining autonomous neural agents with real-world embedded telemetry and hardware deployment.
+            </p>
+</div>
+<!-- 4 Architectural Pillars Grid (Alternating Neo-card treatments) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1: White Card -->
+<div class="bg-white p-7 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="font-mono text-xs font-bold text-dark-charcoal bg-neon-lime px-2.5 py-0.5 rounded-full border border-dark-charcoal">[PIL-01]</span>
+<div class="w-10 h-10 rounded-2xl bg-dark-charcoal text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase text-dark-charcoal mb-2 font-bold">AUTONOMOUS SYSTEMS</h3>
+<p class="font-body text-xs text-text-muted leading-relaxed">
+                  Multi-rotor navigation, obstacle avoidance telemetry, and robotic field kinematics engineered for precision execution in unmapped terrains.
+                </p>
+</div>
+<div class="pt-5 mt-5 border-t border-border-dark/10 font-mono text-[11px] text-text-muted uppercase flex items-center justify-between">
+<span class="">ROBOTICS STACK</span>
+<span class="text-dark-charcoal font-bold bg-soft-gray px-2 py-0.5 rounded border border-border-dark/20">RTOS / ROS2</span>
+</div>
+</div>
+<!-- Pillar 2: Lime Green Card (from reference) -->
+<div class="bg-neon-lime p-7 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="font-mono text-xs font-bold text-neon-lime bg-dark-charcoal px-2.5 py-0.5 rounded-full">[PIL-02]</span>
+<div class="w-10 h-10 rounded-2xl bg-white text-dark-charcoal border border-dark-charcoal flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase text-dark-charcoal mb-2 font-bold">NEURAL AUTOMATION</h3>
+<p class="font-body text-xs text-dark-charcoal/80 leading-relaxed font-medium">
+                  Autonomous multi-agent architectures, dynamic synthesis pipelines, and high-volume intelligent lead identification frameworks.
+                </p>
+</div>
+<div class="pt-5 mt-5 border-t border-dark-charcoal/20 font-mono text-[11px] text-dark-charcoal uppercase flex items-center justify-between font-bold">
+<span class="">COGNITIVE CORE</span>
+<span class="text-dark-charcoal bg-white px-2 py-0.5 rounded border border-dark-charcoal">LLM / AGENTS</span>
+</div>
+</div>
+<!-- Pillar 3: Dark Charcoal Card (from reference) -->
+<div class="bg-dark-charcoal text-white p-7 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#B9FF66] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="font-mono text-xs font-bold text-dark-charcoal bg-neon-lime px-2.5 py-0.5 rounded-full">[PIL-03]</span>
+<div class="w-10 h-10 rounded-2xl bg-white/10 text-neon-lime flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase text-white mb-2 font-bold">ENTERPRISE ENGINES</h3>
+<p class="font-body text-xs text-white/70 leading-relaxed">
+                  Ultra-fast computational dashboards, low-latency mission portals, and resilient database infrastructures built for zero downtime.
+                </p>
+</div>
+<div class="pt-5 mt-5 border-t border-white/20 font-mono text-[11px] text-white/70 uppercase flex items-center justify-between">
+<span class="">LATENCY TARGET</span>
+<span class="text-neon-lime font-bold font-mono">&lt; 15MS SSR</span>
+</div>
+</div>
+<!-- Pillar 4: White Card -->
+<div class="bg-white p-7 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="font-mono text-xs font-bold text-dark-charcoal bg-neon-lime px-2.5 py-0.5 rounded-full border border-dark-charcoal">[PIL-04]</span>
+<div class="w-10 h-10 rounded-2xl bg-dark-charcoal text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">developer_board</span>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase text-dark-charcoal mb-2 font-bold">EMBEDDED HARDWARE</h3>
+<p class="font-body text-xs text-text-muted leading-relaxed">
+                  Custom ESP32 micro-architectures, industrial I/O controller loops, telemetry relays, and low-power sensory arrays.
+                </p>
+</div>
+<div class="pt-5 mt-5 border-t border-border-dark/10 font-mono text-[11px] text-text-muted uppercase flex items-center justify-between">
+<span class="">CONTROLLER BASE</span>
+<span class="text-dark-charcoal font-bold bg-soft-gray px-2 py-0.5 rounded border border-border-dark/20">ESP32-S3 / C++</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: SERVICE HIGHLIGHTS MATRIX (Matching Reference Bento Cards) -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-neon-lime text-dark-charcoal font-display font-bold text-2xl lg:text-3xl px-4 py-1.5 rounded-xl border border-dark-charcoal shadow-[2px_2px_0px_0px_#191A23]">
+              Services
+            </span>
+<p class="font-body text-sm text-text-muted max-w-md">
+              At our engineering lab, we offer a range of services to turn concepts into real-world autonomous hardware and neural software.
+            </p>
+</div>
+<div class="font-mono text-xs text-dark-charcoal uppercase font-bold bg-soft-gray px-3 py-1.5 rounded-full border border-border-dark/20">
+            STANDARDS: ISO-COMPLIANT / HARD REAL-TIME
+          </div>
+</div>
+<!-- 2x2 Bento Cards exactly as shown in reference:
+             Card 1: Light gray/white with lime badge
+             Card 2: Neon lime card with white/dark badge
+             Card 3: Dark charcoal card with lime badge
+             Card 4: Light gray/white card with lime badge
+        -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Service 01 (Clean light card with lime pill) -->
+<div class="bg-soft-gray p-8 lg:p-10 rounded-3xl border-2 border-dark-charcoal shadow-[5px_5px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block bg-neon-lime text-dark-charcoal font-display font-bold text-xs uppercase px-3 py-1 rounded-lg border border-dark-charcoal">
+                  [SRV-NODE // 01]
+                </span>
+<span class="font-mono text-[11px] font-bold text-text-muted uppercase">STATUS: DEPLOYING</span>
+</div>
+<h3 class="font-display text-2xl lg:text-3xl uppercase text-dark-charcoal font-bold mb-4 leading-snug">
+                AI SOLUTIONS &amp;<br>AUTONOMOUS AGENTS
+              </h3>
+<p class="font-body text-sm text-text-muted mb-6 leading-relaxed">
+                Deployment of proprietary retrieval-augmented agents, predictive pipeline models, intelligent CRM automation, and high-frequency document extraction workflows engineered to execute human-tier operations at silicon speed.
+              </p>
+<div class="grid grid-cols-2 gap-2 font-mono text-xs text-dark-charcoal py-3 mb-6 bg-white p-3 rounded-2xl border border-border-dark/15">
+<div class="">• VECTOR ENGINES</div>
+<div class="">• AUTONOMOUS SCRAPING</div>
+<div class="">• REINFORCEMENT DISPATCH</div>
+<div class="">• LOCAL LLM INTEGRATION</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono text-xs text-text-muted uppercase">SPEC: ROBO-AI-AG</span>
+<a class="flex items-center gap-2 font-display text-sm font-bold text-dark-charcoal group-hover:text-dark-charcoal/70" data-path="services" href="#">
+<span class="w-9 h-9 rounded-full bg-dark-charcoal text-white flex items-center justify-center group-hover:bg-neon-lime group-hover:text-dark-charcoal transition-colors">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</span>
+<span class="">Learn more</span>
+</a>
+</div>
+</div>
+<!-- Service 02 (Neon Lime Green Card from reference) -->
+<div class="bg-neon-lime p-8 lg:p-10 rounded-3xl border-2 border-dark-charcoal shadow-[5px_5px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block bg-white text-dark-charcoal font-display font-bold text-xs uppercase px-3 py-1 rounded-lg border border-dark-charcoal">
+                  [SRV-NODE // 02]
+                </span>
+<span class="font-mono text-[11px] font-bold text-dark-charcoal uppercase">STATUS: DEPLOYING</span>
+</div>
+<h3 class="font-display text-2xl lg:text-3xl uppercase text-dark-charcoal font-bold mb-4 leading-snug">
+                CUSTOM INDUSTRIAL<br>SOFTWARE ARCHITECTURES
+              </h3>
+<p class="font-body text-sm text-dark-charcoal/85 mb-6 leading-relaxed font-medium">
+                Architecting fault-tolerant distributed servers, mission controllers, and bespoke backends designed for enterprise reliability. Built using memory-safe architectures capable of sustained processing throughput without resource leakage.
+              </p>
+<div class="grid grid-cols-2 gap-2 font-mono text-xs text-dark-charcoal py-3 mb-6 bg-white/70 p-3 rounded-2xl border border-dark-charcoal/30">
+<div class="">• DISTRIBUTED SCHEDULERS</div>
+<div class="">• CONCURRENT PIPELINES</div>
+<div class="">• EVENT SOURCING LOGS</div>
+<div class="">• SECURE RPC TELEMETRY</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono text-xs text-dark-charcoal font-bold uppercase">SPEC: IND-SOFT-ARCH</span>
+<a class="flex items-center gap-2 font-display text-sm font-bold text-dark-charcoal" data-path="services" href="#">
+<span class="w-9 h-9 rounded-full bg-dark-charcoal text-white flex items-center justify-center group-hover:bg-white group-hover:text-dark-charcoal transition-colors">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</span>
+<span class="">Learn more</span>
+</a>
+</div>
+</div>
+<!-- Service 03 (Dark Charcoal Card from reference) -->
+<div class="bg-dark-charcoal text-white p-8 lg:p-10 rounded-3xl border-2 border-dark-charcoal shadow-[5px_5px_0px_0px_#B9FF66] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block bg-neon-lime text-dark-charcoal font-display font-bold text-xs uppercase px-3 py-1 rounded-lg">
+                  [SRV-NODE // 03]
+                </span>
+<span class="font-mono text-[11px] font-bold text-neon-lime uppercase">STATUS: ACTIVE HARDWARE</span>
+</div>
+<h3 class="font-display text-2xl lg:text-3xl uppercase text-white font-bold mb-4 leading-snug">
+                ESP32 ROBOTICS &amp;<br>EMBEDDED AUTOMATION
+              </h3>
+<p class="font-body text-sm text-white/70 mb-6 leading-relaxed">
+                Complete physical-layer design: circuit schematics, custom PCB layout, and low-level firmware engineering for autonomous robots, industrial spraying systems, telemetry trackers, and sensor fusion units.
+              </p>
+<div class="grid grid-cols-2 gap-2 font-mono text-xs text-white/80 py-3 mb-6 bg-white/10 p-3 rounded-2xl border border-white/20">
+<div class="">• FREE-RTOS KERNEL</div>
+<div class="">• BLE &amp; ESP-NOW MESH</div>
+<div class="">• MOTOR PWM DRIVERS</div>
+<div class="">• ACTUATOR PRECISION</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono text-xs text-neon-lime uppercase">SPEC: HARD-EMB-ESP</span>
+<a class="flex items-center gap-2 font-display text-sm font-bold text-neon-lime group-hover:underline" data-path="services" href="#">
+<span class="w-9 h-9 rounded-full bg-neon-lime text-dark-charcoal flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</span>
+<span class="">Learn more</span>
+</a>
+</div>
+</div>
+<!-- Service 04 (Clean light card with lime pill) -->
+<div class="bg-soft-gray p-8 lg:p-10 rounded-3xl border-2 border-dark-charcoal shadow-[5px_5px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block bg-neon-lime text-dark-charcoal font-display font-bold text-xs uppercase px-3 py-1 rounded-lg border border-dark-charcoal">
+                  [SRV-NODE // 04]
+                </span>
+<span class="font-mono text-[11px] font-bold text-text-muted uppercase">STATUS: DEPLOYING</span>
+</div>
+<h3 class="font-display text-2xl lg:text-3xl uppercase text-dark-charcoal font-bold mb-4 leading-snug">
+                MODERN ENTERPRISE<br>WEB APPLICATIONS
+              </h3>
+<p class="font-body text-sm text-text-muted mb-6 leading-relaxed">
+                Crafting bespoke web consoles, real-time telemetry observation interfaces, and responsive administrative dashboards using high-frequency edge-rendered frameworks with mathematical typography alignment.
+              </p>
+<div class="grid grid-cols-2 gap-2 font-mono text-xs text-dark-charcoal py-3 mb-6 bg-white p-3 rounded-2xl border border-border-dark/15">
+<div class="">• REACT / NEXT STACK</div>
+<div class="">• WEBSOCKET FEEDS</div>
+<div class="">• SUB-100MS FCP</div>
+<div class="">• RBAC GOVERNANCE</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono text-xs text-text-muted uppercase">SPEC: WEB-ENG-PLAT</span>
+<a class="flex items-center gap-2 font-display text-sm font-bold text-dark-charcoal group-hover:text-dark-charcoal/70" data-path="services" href="#">
+<span class="w-9 h-9 rounded-full bg-dark-charcoal text-white flex items-center justify-center group-hover:bg-neon-lime group-hover:text-dark-charcoal transition-colors">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</span>
+<span class="">Learn more</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: SELECTED MISSION PROJECTS -->
+<section class="w-full bg-light-bg py-16 lg:py-20 border-t border-border-dark/15">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Header Matrix -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-neon-lime text-dark-charcoal font-display font-bold text-2xl lg:text-3xl px-4 py-1.5 rounded-xl border border-dark-charcoal shadow-[2px_2px_0px_0px_#191A23]">
+                Case Studies
+              </span>
+<h2 class="font-display text-2xl lg:text-3xl uppercase tracking-tight text-dark-charcoal font-bold">
+                Selected Mission Projects
+              </h2>
+</div>
+<a class="font-display text-sm font-bold text-dark-charcoal hover:text-text-muted flex items-center gap-2 uppercase tracking-wider group" data-path="about-projects" href="#">
+<span class="">VIEW ALL MISSIONS</span>
+<span class="w-7 h-7 rounded-full bg-dark-charcoal text-white flex items-center justify-center group-hover:bg-neon-lime group-hover:text-dark-charcoal transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+</div>
+<!-- 4 Selected Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Project 01: ROBOPIX AI Lead Finder -->
+<div class="bg-white p-5 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-full h-44 bg-dark-charcoal rounded-2xl overflow-hidden mb-4 relative border border-dark-charcoal">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90 group-hover:opacity-100 transition-opacity" data-alt="Dark monochrome minimal terminal interface showcasing algorithmic data scraping and verified AI leads in real-time tabular format with high contrast black and white elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnq2eWTU3jvRi9JHrhZPZaT4_3dd6Xy2enTuAJPwd0f5PAxMNA2r43MrxgJkMz42FcU7i8thG7WAUREHjUqkSAGpfbXq6v5RtUsrnepZ50ihEi3MdgXz9eVtiaPvkx3vHjUsJllw__iPRcA0DQZvW02D3FJRPrO-987-rCiKifn0il4ClZhYU5VppImJnGPgDjZ7vqWExAgFJf5Uh0HCfeGRV_uTdY0br62Xsa5jw">
+<div class="absolute top-2 right-2 bg-neon-lime text-dark-charcoal px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-dark-charcoal">
+                    LIVE // ACTIVE
+                  </div>
+<div class="absolute bottom-2 left-2 bg-dark-charcoal/90 text-white px-2 py-0.5 rounded font-mono text-[10px]">
+                    SYS-ID: RF-01
+                  </div>
+</div>
+<div class="font-mono text-[10px] text-text-muted uppercase mb-1 font-bold">COGNITIVE DATA ENGINE</div>
+<h3 class="font-display text-base uppercase text-dark-charcoal font-bold mb-2">
+                  ROBOPIX AI LEAD FINDER
+                </h3>
+<p class="font-body text-xs text-text-muted leading-relaxed mb-4">
+                  Autonomous multi-agent crawler indexing target enterprise nodes, analyzing intent metrics, and generating qualified B2B communication pipelines.
+                </p>
+</div>
+<div class="pt-3 border-t border-border-dark/15 font-mono text-[11px] text-text-muted flex items-center justify-between uppercase">
+<span class="">STATUS</span>
+<span class="text-dark-charcoal font-bold bg-neon-lime px-2 py-0.5 rounded border border-dark-charcoal">OPERATIONAL</span>
+</div>
+</div>
+<!-- Project 02: Fertilizer Spraying Robot -->
+<div class="bg-white p-5 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-full h-44 bg-dark-charcoal rounded-2xl overflow-hidden mb-4 relative border border-dark-charcoal">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90 group-hover:opacity-100 transition-opacity" data-alt="Monochrome engineering blueprint schematic of an autonomous agricultural robotic rover equipped with precision spray nozzles, ultrasonic sensors, and track chassis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEzZd1N94ShO0XeYxDUB1s-6aNvRH0hDZXnBONEtJBYD5eCWPs0SSh5HpGc--X0u2H87rn9Zg9H1MX-sfvm5bKrlO0yllj8lz9TsQFOYvnRuLbzDX2B4na4jwuepFDk2NOV9Ab9Yqh6bzWBYRnyGksh4FdPWYKpMLAYNeHk9AQ3CRrNFoa6l3uazE78Q9_XhjgYz917TOcOfZULInOtPSpIWnC3j_rfFLADVNtFaM">
+<div class="absolute top-2 right-2 bg-soft-gray text-dark-charcoal px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-dark-charcoal">
+                    PROTOTYPE
+                  </div>
+<div class="absolute bottom-2 left-2 bg-dark-charcoal/90 text-white px-2 py-0.5 rounded font-mono text-[10px]">
+                    SYS-ID: AGRO-BOT
+                  </div>
+</div>
+<div class="font-mono text-[10px] text-text-muted uppercase mb-1 font-bold">AGRO-ROBOTICS HARDWARE</div>
+<h3 class="font-display text-base uppercase text-dark-charcoal font-bold mb-2">
+                  FERTILIZER SPRAYING ROBOT
+                </h3>
+<p class="font-body text-xs text-text-muted leading-relaxed mb-4">
+                  ESP32 autonomous ground vehicle featuring obstacle avoidance sensor mesh, PWM pressure regulators, and variable spray nozzle trajectory loops.
+                </p>
+</div>
+<div class="pt-3 border-t border-border-dark/15 font-mono text-[11px] text-text-muted flex items-center justify-between uppercase">
+<span class="">BENCHMARK</span>
+<span class="text-dark-charcoal font-bold bg-soft-gray px-2 py-0.5 rounded border border-border-dark/20">TEST LAB V3</span>
+</div>
+</div>
+<!-- Project 03: KaamMitra -->
+<div class="bg-white p-5 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-full h-44 bg-dark-charcoal rounded-2xl overflow-hidden mb-4 relative border border-dark-charcoal">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90 group-hover:opacity-100 transition-opacity" data-alt="Minimalist mobile app technical console wireframe showing blue-collar skill matching algorithm, location geo-coordinates, and zero-latency SMS dispatch protocols" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl3FEtY6YZmQaO_s5lbB2rIWNnrtf_nwR3PTcDUnDFB4RFn7abUJi5dd1CKSYWppF-zq2h2xoEX4k7o_CY-vzW7GGV8PoTT9P-4H4HKP2E65CBt9Ir--2e5XiOwTZND7K0MgQlmE9r4rsYkPNoCAyJmI4n0IYjUqFo5COca2C4xrvSSxj0nexRDpXH5fwuBcHMmJs3YCrUmvka68WJ85Pyq8AQ6plRI9b2bEKc3zQ">
+<div class="absolute top-2 right-2 bg-soft-gray text-dark-charcoal px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-dark-charcoal">
+                    DEV STAGE
+                  </div>
+<div class="absolute bottom-2 left-2 bg-dark-charcoal/90 text-white px-2 py-0.5 rounded font-mono text-[10px]">
+                    SYS-ID: KM-CORE
+                  </div>
+</div>
+<div class="font-mono text-[10px] text-text-muted uppercase mb-1 font-bold">DISTRIBUTED MARKET ENGINE</div>
+<h3 class="font-display text-base uppercase text-dark-charcoal font-bold mb-2">
+                  KAAMMITRA PLATFORM
+                </h3>
+<p class="font-body text-xs text-text-muted leading-relaxed mb-4">
+                  Zero-friction employment dispatch platform linking decentralized workforce talent with municipal opportunities via automated IVR and voice AI.
+                </p>
+</div>
+<div class="pt-3 border-t border-border-dark/15 font-mono text-[11px] text-text-muted flex items-center justify-between uppercase">
+<span class="">METRIC</span>
+<span class="text-dark-charcoal font-bold bg-soft-gray px-2 py-0.5 rounded border border-border-dark/20">BUILD 0.72</span>
+</div>
+</div>
+<!-- Project 04: Jarvis AI -->
+<div class="bg-white p-5 rounded-3xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] flex flex-col justify-between group hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-full h-44 bg-dark-charcoal rounded-2xl overflow-hidden mb-4 relative border border-dark-charcoal">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90 group-hover:opacity-100 transition-opacity" data-alt="Monochrome futuristic workstation with speech waveform telemetry tracker, edge inference neural monitor, and direct terminal shell controls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc2qUM-Zh0KZabyXwgl2OQUGvcKpWqeeZP2HCr82tCcAU654s3wh97rxJdeSAjwjHQCsWnWhMNbpGHL7AnxMGwKP5Dw-zBzz4W-ZWUjqfo0rbIUB5gogPlfMIPU_QmZDuOc1SCzeh8SrPufmJHxGL479p5UZ9wUYUgC0laHSYE3w9T7xeMicLct3LRBfSnWNjR0J7K-a3eGsZbhRznFu1-IPv-0f89WlfGJoPays4">
+<div class="absolute top-2 right-2 bg-soft-gray text-dark-charcoal px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-dark-charcoal">
+                    PROTOTYPE
+                  </div>
+<div class="absolute bottom-2 left-2 bg-dark-charcoal/90 text-white px-2 py-0.5 rounded font-mono text-[10px]">
+                    SYS-ID: JARVIS-X
+                  </div>
+</div>
+<div class="font-mono text-[10px] text-text-muted uppercase mb-1 font-bold">VOICE-SYNTHESIS AGENT</div>
+<h3 class="font-display text-base uppercase text-dark-charcoal font-bold mb-2">
+                  JARVIS AI ASSISTANT
+                </h3>
+<p class="font-body text-xs text-text-muted leading-relaxed mb-4">
+                  Low-latency local-first multimodal assistant capable of executing shell commands, synthesizing real-time code fixes, and operating test sensor rigs.
+                </p>
+</div>
+<div class="pt-3 border-t border-border-dark/15 font-mono text-[11px] text-text-muted flex items-center justify-between uppercase">
+<span class="">LATENCY</span>
+<span class="text-dark-charcoal font-bold bg-neon-lime px-2 py-0.5 rounded border border-dark-charcoal">210MS WAKE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: CONSULTATION BOOKING / ARCHITECTURAL REVIEW TERMINAL CARD -->
+<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
+<!-- Call to Action Banner matching the reference styling (charcoal/green neo card) -->
+<div class="bg-soft-gray rounded-3xl lg:rounded-4xl p-8 lg:p-14 border-2 border-dark-charcoal shadow-[8px_8px_0px_0px_#191A23] relative overflow-hidden">
+<!-- Background geometric doodle -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-neon-lime/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Text & Spec Left Column -->
+<div class="lg:col-span-7 flex flex-col space-y-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-neon-lime border border-dark-charcoal inline-block"></span>
+<span class="font-mono text-xs text-dark-charcoal font-bold uppercase tracking-wider">TRANSMISSION CHANNEL // READY</span>
+</div>
+<h2 class="font-display text-3xl lg:text-4xl uppercase tracking-tight text-dark-charcoal font-bold leading-tight">
+                Let's make things happen!
+              </h2>
+<p class="font-body text-base text-text-muted max-w-xl leading-relaxed">
+                Contact us today to learn more about how our autonomous robotics, specialized AI pipelines, and embedded IoT frameworks can help your business grow. Engage directly with founder Vishwam Patel.
+              </p>
+<div class="pt-2 flex flex-wrap gap-4 font-mono text-xs text-text-muted">
+<span class="bg-white px-3 py-1 rounded-lg border border-border-dark/15 font-bold text-dark-charcoal">TERMINAL: AP-SOUTH-1</span>
+<span class="bg-white px-3 py-1 rounded-lg border border-border-dark/15 font-bold text-dark-charcoal">HOTLINE: +91 9510477366</span>
+<span class="bg-white px-3 py-1 rounded-lg border border-border-dark/15 font-bold text-dark-charcoal">4096-BIT RSA READY</span>
+</div>
+</div>
+<!-- Action Triggers Right Column -->
+<div class="lg:col-span-5 flex flex-col space-y-3.5">
+<a class="w-full py-4 px-6 bg-dark-charcoal text-white font-display text-sm uppercase tracking-wider font-bold rounded-2xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#B9FF66] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#B9FF66] transition-all flex items-center justify-center gap-2 text-center" data-path="consultation-booking" href="#">
+<span class="">[SCHEDULE CONSULTATION]</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="w-full py-4 px-6 bg-neon-lime text-dark-charcoal font-display text-sm uppercase tracking-wider font-bold rounded-2xl border-2 border-dark-charcoal shadow-[4px_4px_0px_0px_#191A23] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#191A23] transition-all flex items-center justify-center gap-2 text-center" href="https://wa.me/919510477366?text=ROBOPIX%20INQUIRY:%20Requesting%20architectural%20consultation" rel="noopener" target="_blank">
+<span class="">[DISPATCH WHATSAPP]</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+<div class="p-2 text-center font-mono text-[11px] text-dark-charcoal font-bold uppercase tracking-wider">
+                GUARANTEED RESPONSE &lt; 4 HOURS
+              </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Coordinate Tracker Micro-Logic -->
+<script>
+        (function initFlightDeck() {
+          // Clock live update
+          function updateClock() {
+            const clockEl = document.getElementById('system-live-clock');
+            if (clockEl) {
+              const now = new Date();
+              clockEl.textContent = now.toUTCString().slice(17, 25) + ' UTC';
+            }
+          }
+          setInterval(updateClock, 1000);
+          updateClock();
+
+          // Schematic Interactive Tracking
+          const module = document.getElementById('interactive-schematic-module');
+          const coordsEl = document.getElementById('tracker-coords');
+          const rollEl = document.getElementById('imu-roll');
+          const pitchEl = document.getElementById('imu-pitch');
+          const beacon = document.getElementById('beacon-node');
+
+          if (module && coordsEl && rollEl && pitchEl) {
+            module.addEventListener('mousemove', function(e) {
+              const rect = module.getBoundingClientRect();
+              const x = Math.round(e.clientX - rect.left);
+              const y = Math.round(e.clientY - rect.top);
+              const z = Math.round((x + y) / 10);
+
+              coordsEl.textContent = `X: ${x} | Y: ${y} | Z: ${z}.0`;
+
+              const rollVal = ((x / rect.width - 0.5) * 4.0).toFixed(2);
+              const pitchVal = ((y / rect.height - 0.5) * -4.0).toFixed(2);
+
+              rollEl.textContent = `${rollVal > 0 ? '+' : ''}${rollVal}°`;
+              pitchEl.textContent = `${pitchVal > 0 ? '+' : ''}${pitchVal}°`;
+
+              if (beacon) {
+                const mappedX = 140 + Math.round((x / rect.width) * 120);
+                const mappedY = 90 + Math.round((y / rect.height) * 80);
+                beacon.setAttribute('cx', mappedX);
+                beacon.setAttribute('cy', mappedY);
+              }
+            });
+
+            module.addEventListener('mouseleave', function() {
+              coordsEl.textContent = 'X: 524 | Y: 218 | Z: 91.0';
+              rollEl.textContent = '+0.12°';
+              pitchEl.textContent = '-0.04°';
+              if (beacon) {
+                beacon.setAttribute('cx', '280');
+                beacon.setAttribute('cy', '110');
+              }
+            });
+          }
+        })();
+      </script>
+</div>
+</main>
+<!-- FOOTER in Neo-Grotesque Dark Charcoal with Lime highlights -->
+<footer class="w-full bg-dark-charcoal text-white pt-16 pb-12 rounded-t-3xl sm:rounded-t-4xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Top Row -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-10 border-b border-white/10 gap-6">
+<div class="flex items-center gap-3">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTCp-J4nNFTlBf66Ahxe9BlG7eUFDs90mAaZIYndNsrbN4q0RT-3OHswdQRhWCgvHH1Cc0ux73nrT2s0vpQJnGNHI4ZRGPEa891bOJNDwImMSfFv0uihLS7YdYhEz485oyPqJSVzAHnPWxyh28tE-Dew86pYJYYz502Te2UdmShr-1tuKcK90bNZ-JdQZQ33FgcnJoYH2QPZgQMXc9V5n0rzdTgdkfnh-0hDIHJHRtp4A0jSt1gD02bWQEA1kYTVWaRQ" alt="ROBOPIX Logo" class="h-9 w-9 rounded-xl object-contain bg-white p-0.5">
+<span class="font-display text-2xl uppercase tracking-wider font-bold text-white">ROBOPIX</span>
+<span class="font-mono text-xs text-white/50 uppercase ml-2">// BEYOND THE POSSIBLE</span>
+</div>
+<div class="flex items-center gap-2">
+<a class="px-4 py-2 bg-neon-lime text-dark-charcoal font-display font-bold text-xs uppercase rounded-full hover:bg-white transition-colors" href="https://wa.me/919510477366" rel="noopener" target="_blank">
+            WHATSAPP DIRECT
+          </a>
+<a class="px-4 py-2 bg-white/10 text-white font-mono text-xs uppercase rounded-full hover:bg-white/20 transition-colors" href="tel:+919510477366">
+            +91 9510477366
+          </a>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
+<div class="flex flex-col gap-3">
+<div class="font-display text-sm font-bold uppercase tracking-wider text-neon-lime">ROBOPIX ARCHITECTURE</div>
+<p class="font-body text-xs text-white/70 max-w-xs leading-relaxed">
+            High-reliability autonomous frameworks, industrial robotics architecture, and mission-critical engineering solutions.
+          </p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-mono text-xs text-white/50 uppercase mb-2 font-bold">OPERATIONAL MATRICES</div>
+<a class="font-display text-sm text-white/80 hover:text-neon-lime transition-colors" data-path="services" href="#">Autonomous Robotics</a>
+<a class="font-display text-sm text-white/80 hover:text-neon-lime transition-colors" data-path="solutions" href="#">Vision Processing</a>
+<a class="font-display text-sm text-white/80 hover:text-neon-lime transition-colors" data-path="about-projects" href="#">Mission Projects</a>
+<a class="font-display text-sm text-white/80 hover:text-neon-lime transition-colors" data-path="process" href="#">Deployment Protocol</a>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-mono text-xs text-white/50 uppercase mb-2 font-bold">COMMUNICATION LINK</div>
+<div class="font-mono text-xs text-white">TEL: +91 9510477366</div>
+<a class="font-mono text-xs text-neon-lime hover:underline transition-colors flex items-center gap-1" href="https://wa.me/919510477366" rel="noopener" target="_blank">
+<span class="">[WHATSAPP COMMS]</span>
+</a>
+<div class="font-mono text-xs text-white/50 uppercase mt-1">BASE: BANGALORE / HYDERABAD / GUJARAT</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-mono text-xs text-white/50 uppercase mb-2 font-bold">TELEMETRY LOG</div>
+<div class="font-mono text-xs text-white/70">STATION: AP-SOUTH-1</div>
+<div class="font-mono text-xs text-white/70">UPTIME: 99.998% ACTIVE</div>
+<div class="font-mono text-xs text-neon-lime">SEC_CHANNEL: TLS_v1.3_STRICT</div>
+<div class="font-mono text-[10px] text-white/50 uppercase mt-2">FLAG // VERIFIED ENTITY</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/50">
+<div class="">© 2025 ROBOPIX ENGINEERING SYSTEMS. ALL RIGHTS RESERVED.</div>
+<div class="text-neon-lime">SYS-REF: ROBOPIX-NODE-01 // PRODUCTION</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

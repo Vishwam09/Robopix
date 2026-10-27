@@ -1,0 +1,831 @@
+<!DOCTYPE html><html lang="en" __gcrremoteframetoken="bc6fae08bb32874a64c144f975b1e803"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#b9ff66",
+            "primary-container": "#b9ff66",
+            "dark-card": "#191a23",
+            "dark-border": "#191a23",
+            "surface": "#ffffff",
+            "surface-dim": "#f3f3f3",
+            "surface-container": "#f3f3f3",
+            "surface-container-high": "#e8e8e8",
+            "on-surface": "#191a23",
+            "on-surface-variant": "#292a32",
+            "outline": "#191a23",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "mono": ["Space Mono", "monospace"],
+          },
+          borderRadius: {
+            "3xl": "2.5rem",
+            "2xl": "1.75rem",
+          },
+          boxShadow: {
+            "brutal": "0 5px 0 0 #191a23",
+            "brutal-lg": "0 8px 0 0 #191a23",
+          }
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-[#ffffff] font-body text-[#191a23] antialiased selection:bg-[#b9ff66] selection:text-[#191a23]">
+<!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#ffffff]/90 backdrop-blur-md border-b border-[#191a23]/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 group" data-path="home" href="#"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gtOkXD8OQcbU4K7K59YkOOopS_syv7ouXnU-SY_cGYu13fKvd14th_yiFZ6IgSxkcdLczXcSy9mD8yfsEMmYIypuXXgDMgSwuV6QUum1IuE5Wd1Q3D_Gj74i1cQ_74QnL1WkWwIrUwDoBtd1oT5oWJOyif3XcJQM4aJUTMFH2cpuNnuA8gcfizdvrkO5m4LfHUjl6kzeiyf2luhjjzePtvsP9zb-OQmwpMFgQ7DKuI_mts5S0OlHqSLyHXNGigJwJw" alt="ROBOPIX Logo" class="h-10 w-auto object-contain rounded-md"></a>
+<div class="hidden xl:flex items-center gap-2 font-mono text-xs text-[#191a23]/70 bg-[#f3f3f3] px-3 py-1 rounded-full border border-[#191a23]/15">
+<span class="w-2 h-2 rounded-full bg-[#191a23] animate-pulse"></span>
+<span class="">BEYOND THE POSSIBLE // TEL: +91 9510477366</span>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-2 font-display text-sm font-semibold tracking-wide">
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="home" href="#">Home</a>
+<a class="px-4 py-2 rounded-full bg-[#191a23] text-white" data-path="about-projects" href="#">About &amp; Projects</a>
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="services" href="#">Services</a>
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="solutions" href="#">Solutions</a>
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="process" href="#">Process</a>
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="faq" href="#">FAQ</a>
+<a class="px-4 py-2 rounded-full hover:bg-[#b9ff66] transition-colors" data-path="contact" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-xl border border-[#191a23] text-[#191a23] font-display text-sm font-semibold hover:bg-[#191a23] hover:text-[#b9ff66] transition-all shadow-[2px_2px_0_0_#191a23]" data-path="consultation-booking" href="#">
+          Book Consult
+        </a>
+<div class="flex items-center gap-2">
+<a class="px-3 py-1.5 text-xs font-display font-semibold hover:underline" data-path="login" href="#">Sign In</a>
+<a class="px-4 py-2 rounded-xl bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold border border-[#191a23] hover:bg-[#191a23] hover:text-[#b9ff66] transition-all shadow-[2px_2px_0_0_#191a23]" data-path="login" href="#">Sign Up</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20">
+<div class="flex flex-col w-full">
+<!-- Telemetry Strip -->
+<section class="w-full bg-[#f3f3f3] border-b border-[#191a23]/10 py-2.5 px-6">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+<div class="flex items-center gap-4">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23]/20">SPEC-DOC // ARCHIVE-2025.A</span>
+<span class="text-[#191a23]/70 hidden sm:inline">ORIGIN: AHMEDABAD / BENGALURU NODE</span>
+<span class="flex items-center gap-1.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-[#191a23]"></span>
+              VERIFIED REGISTRY: 10 ACTIVE SYSTEMS
+            </span>
+</div>
+<div class="flex items-center gap-3 text-[#191a23]/70">
+<span class="">SECURITY LEVEL: UNRESTRICTED</span>
+<span class="">//</span>
+<span class="text-[#191a23] font-bold">SYS_INTEGRITY: 100%</span>
+</div>
+</div>
+</section>
+<!-- Hero Dossier Section -->
+<section class="max-w-7xl mx-auto px-6 py-14 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="inline-flex self-start items-center gap-2 bg-[#b9ff66] text-[#191a23] px-3.5 py-1 rounded-md text-sm font-display font-bold border border-[#191a23]/15">
+<span class="">●</span> MISSION STATEMENT &amp; ARCHITECTURAL DIRECTORY
+            </div>
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-[#191a23] leading-none">
+              Turn ideas into practical, intelligent technology.
+            </h1>
+<p class="font-body text-lg text-[#191a23]/80 max-w-2xl mt-2 leading-relaxed">
+              Uncompromising production grade systems engineering. ROBOPIX deploys zero-hyperbole automation, low-latency firmware, and robust web runtime environments built to withstand actual operational environments.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="px-6 py-3 rounded-2xl bg-[#191a23] text-white font-display text-base font-semibold hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all shadow-brutal flex items-center gap-2" href="https://wa.me/919510477366" rel="noopener" target="_blank">
+<span class="">Start Direct Consultation</span>
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+<a class="px-6 py-3 rounded-2xl bg-[#ffffff] text-[#191a23] font-display text-base font-semibold border-2 border-[#191a23] hover:bg-[#f3f3f3] transition-all shadow-brutal" href="#projects-grid">
+                Explore Archives (10)
+              </a>
+</div>
+</div>
+<!-- Hero Metrics Card (Positivus Style B: Lime) -->
+<div class="lg:col-span-4 bg-[#b9ff66] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal flex flex-col justify-between">
+<div class="flex items-center justify-between pb-4 border-b border-[#191a23]/20">
+<span class="font-display font-bold text-xs uppercase tracking-wider text-[#191a23]">REGISTRY METRICS</span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded-full border border-[#191a23]">FLT: NOMINAL</span>
+</div>
+<div class="grid grid-cols-3 gap-3 pt-6 pb-4">
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-3 text-center shadow-[2px_2px_0_0_#191a23]">
+<div class="font-display text-3xl font-bold text-[#191a23]">04</div>
+<div class="font-mono text-[10px] font-bold text-[#191a23] mt-1">LIVE UNITS</div>
+</div>
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-3 text-center shadow-[2px_2px_0_0_#191a23]">
+<div class="font-display text-3xl font-bold text-[#191a23]">05</div>
+<div class="font-mono text-[10px] font-bold text-[#191a23] mt-1">PROTOTYPES</div>
+</div>
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-3 text-center shadow-[2px_2px_0_0_#191a23]">
+<div class="font-display text-3xl font-bold text-[#191a23]">01</div>
+<div class="font-mono text-[10px] font-bold text-[#191a23] mt-1">IN DEV</div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#191a23]/20 flex items-center justify-between text-xs font-mono text-[#191a23]">
+<span class="">NODE: IN-TEL-9510477366</span>
+<span class="font-bold">STATUS: READY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder & Executive Dossier: Vishwam Patel -->
+<section class="max-w-7xl mx-auto px-6 py-6 w-full">
+<div class="bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-8 lg:p-10 shadow-brutal">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Founder Visual Portrait -->
+<div class="lg:col-span-4">
+<div class="relative w-full aspect-[4/5] bg-white border-2 border-[#191a23] rounded-2xl overflow-hidden shadow-[4px_4px_0_0_#191a23]">
+<img class="w-full h-full object-cover" alt="Vishwam Patel - Founder &amp; Systems Architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMEf4RfqC1Z66bkk1-DO-6-wqQ07HPM2HS62g2Ieg0KB-r3MkXW832fht3SvAgcRAIY3A-ckmPTJsM_L347FdY2fysksFaA_UCqsQN2bu9riJxDV10D3HLGC_SLMntQmVBftWmr6PLAyWM5utYJhP4vq1hGlgV-hx3Wn5Rv-0rhHG8o9pKU9FgUNtT528DPV5CkZ0mxQcjXYSIP70g4l2czyFY6D1Abwqyjjb2arNxePsWMBM3uv1eUAFJICUvtrMaJA">
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-[#ffffff]/95 border-t-2 border-[#191a23] flex justify-between items-center">
+<div>
+<span class="block font-display text-base font-bold text-[#191a23]">VISHWAM PATEL</span>
+<span class="block font-mono text-[11px] text-[#191a23]/70 uppercase">FOUNDER // SYSTEMS ARCHITECT</span>
+</div>
+<span class="font-mono text-xs font-bold bg-[#b9ff66] text-[#191a23] px-2 py-0.5 rounded border border-[#191a23]">SEC_ID: VP-01</span>
+</div>
+</div>
+</div>
+<!-- Founder Dossier Creed & Pillars -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3 border-b-2 border-[#191a23]/10">
+<div class="inline-flex items-center gap-2 bg-[#b9ff66] text-[#191a23] px-3 py-1 rounded-md text-xs font-display font-bold border border-[#191a23]">
+                  EXECUTIVE DOSSIER // CORE CREED
+                </div>
+<span class="font-mono text-xs font-bold text-[#191a23]">TEL: +91 9510477366</span>
+</div>
+<div>
+<h2 class="font-display text-3xl font-bold uppercase tracking-tight text-[#191a23]">
+                  Zero fabrication. Real utility.
+                </h2>
+<p class="font-body text-[#191a23]/80 leading-relaxed mt-2 text-base">
+                  “Engineering software and hardware is not about bloated presentation slides or synthetic milestones. It is about whether a robot maneuvers around physical barriers, whether an automated lead protocol extracts reliable verified enterprise contacts, and whether an interface responds in single-digit milliseconds. Every repository in this archive is genuine, tested, and rooted in functional utility.”
+                </p>
+</div>
+<!-- Quad Core Pillars (Positivus rounded box style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-4 shadow-[2px_2px_0_0_#191a23]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-display font-bold text-sm text-[#191a23] uppercase">01 / Practical Innovation</span>
+<span class="w-7 h-7 rounded-full bg-[#b9ff66] flex items-center justify-center border border-[#191a23]">
+<span class="material-symbols-outlined text-[#191a23] text-sm">memory</span>
+</span>
+</div>
+<p class="font-body text-xs text-[#191a23]/70 leading-relaxed">
+                    Direct deployment solutions tailored to clear bottlenecks. Eliminating extraneous dependencies in favor of robust baseline architectures.
+                  </p>
+</div>
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-4 shadow-[2px_2px_0_0_#191a23]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-display font-bold text-sm text-[#191a23] uppercase">02 / Embedded Precision</span>
+<span class="w-7 h-7 rounded-full bg-[#b9ff66] flex items-center justify-center border border-[#191a23]">
+<span class="material-symbols-outlined text-[#191a23] text-sm">precision_manufacturing</span>
+</span>
+</div>
+<p class="font-body text-xs text-[#191a23]/70 leading-relaxed">
+                    Seamless bridge from dual-core ESP32 microcontrollers to edge-computed computer vision and browser-tethered telemetry.
+                  </p>
+</div>
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-4 shadow-[2px_2px_0_0_#191a23]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-display font-bold text-sm text-[#191a23] uppercase">03 / No Synthetic Metrics</span>
+<span class="w-7 h-7 rounded-full bg-[#b9ff66] flex items-center justify-center border border-[#191a23]">
+<span class="material-symbols-outlined text-[#191a23] text-sm">verified</span>
+</span>
+</div>
+<p class="font-body text-xs text-[#191a23]/70 leading-relaxed">
+                    No simulated projects. Each entry in this archive corresponds to verifiable code commits, operational hardware prototypes, or running web instances.
+                  </p>
+</div>
+<div class="bg-white border-2 border-[#191a23] rounded-2xl p-4 shadow-[2px_2px_0_0_#191a23]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-display font-bold text-sm text-[#191a23] uppercase">04 / Client Engagement</span>
+<span class="w-7 h-7 rounded-full bg-[#b9ff66] flex items-center justify-center border border-[#191a23]">
+<span class="material-symbols-outlined text-[#191a23] text-sm">handshake</span>
+</span>
+</div>
+<p class="font-body text-xs text-[#191a23]/70 leading-relaxed">
+                    Dedicated direct consultations, transparent documentation, and mission-aligned deliverables without bureaucratic friction.
+                  </p>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="px-5 py-2.5 rounded-xl bg-[#191a23] text-white font-display text-xs font-bold uppercase tracking-wider hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all shadow-[2px_2px_0_0_#191a23] flex items-center gap-2" href="https://wa.me/919510477366" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-sm">send</span>
+<span class="">DIRECT INQUIRY // +91 9510477366</span>
+</a>
+<a class="px-5 py-2.5 rounded-xl bg-white text-[#191a23] font-display text-xs font-bold uppercase tracking-wider border border-[#191a23] hover:bg-[#b9ff66] transition-all shadow-[2px_2px_0_0_#191a23]" href="#projects-grid">
+                  EXPLORE ALL ARCHIVES [10]
+                </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Registry Section with Pill Filters -->
+<section class="max-w-7xl mx-auto px-6 py-14 w-full" id="projects-grid">
+<div class="flex flex-col gap-8">
+<!-- Section Indicator matching reference badge -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<span class="bg-[#b9ff66] text-[#191a23] text-xl sm:text-2xl font-display font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                Projects
+              </span>
+<span class="font-body text-sm sm:text-base text-[#191a23]/70">
+                Verified index of production systems, prototypes, and operational platforms.
+              </span>
+</div>
+<div class="font-mono text-xs font-bold text-[#191a23] bg-[#f3f3f3] px-3 py-1.5 rounded-full border border-[#191a23]/20 self-start sm:self-auto">
+              [FILTER: MANUAL REGISTRATION]
+            </div>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex flex-wrap gap-2 p-1.5 bg-[#f3f3f3] rounded-2xl border-2 border-[#191a23]" id="filter-container">
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-[#191a23] text-[#b9ff66] shadow-[2px_2px_0_0_#191a23]" onclick="filterCategory('ALL')">
+              ALL [10]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('AI_AUTOMATION')">
+              AI &amp; AUTOMATION [2]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('HARDWARE_ROBOTICS')">
+              ROBOTICS &amp; HARDWARE [1]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('WEB_PLATFORMS')">
+              WEB SYSTEMS [4]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('MOBILE_APPS')">
+              MOBILE APPS [1]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('AI_ASSISTANTS')">
+              AI ASSISTANTS [1]
+            </button>
+<button class="filter-btn px-4 py-2 rounded-xl font-display text-xs font-bold uppercase transition-all bg-white text-[#191a23] hover:bg-[#b9ff66] border border-[#191a23]" onclick="filterCategory('PRODUCTIVITY_EXPERIMENTAL')">
+              PRODUCTIVITY &amp; LABS [1]
+            </button>
+</div>
+<!-- Cards Matrix with 3 Alternating Themes from Reference (Style A: White/Grey, Style B: Lime, Style C: Dark Black) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-matrix">
+<!-- PROJECT 1: Style A (White card, lime badge, dark border) -->
+<article class="project-card flex flex-col justify-between bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="AI_AUTOMATION">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    AI &amp; BUSINESS AUTOMATION
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    LIVE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/60 mb-1">SYS_ID // RPBX-LEAD-01</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">ROBOPIX AI Lead Finder</h3>
+<p class="font-mono text-xs text-[#191a23]/80 mt-1">PURPOSE: Automated B2B Prospect Discovery &amp; Target Enrichment</p>
+</div>
+<p class="font-body text-xs text-[#191a23]/80 leading-relaxed">
+                  Engineered pipeline for identifying high-intent commercial prospects, validating domain records, extracting critical points of contact, and scoring lead feasibility using custom heuristics.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Python</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">REST APIs</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Scraping Engine</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Data Parsing</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23]/70 font-bold">PIPELINE: ACTIVE</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-[#b9ff66] flex items-center justify-center hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry%20regarding%20ROBOPIX%20AI%20Lead%20Finder" rel="noopener" target="_blank" title="Initiate Demo">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 2: Style B (Electric Lime Green background from Positivus reference) -->
+<article class="project-card flex flex-col justify-between bg-[#b9ff66] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="AI_AUTOMATION">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-white text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    AI &amp; BUSINESS AUTOMATION
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    LIVE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/70 mb-1">SYS_ID // RPBX-OUTREACH-02</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">AI Outreach Tool</h3>
+<p class="font-mono text-xs text-[#191a23] font-semibold mt-1">PURPOSE: WhatsApp Dispatch &amp; Adaptive Message Synthesis</p>
+</div>
+<p class="font-body text-xs text-[#191a23] leading-relaxed">
+                  Dynamic outbound messaging system configured for personalized cold engagements, WhatsApp automated webhook integration, and systematic tracking of conversation telemetry.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Python</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">WhatsApp API</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">OpenAI Engine</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Automation</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23] font-bold">VERIFIED DEPLOY</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-white flex items-center justify-center hover:bg-white hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry%20regarding%20AI%20Outreach%20Tool" rel="noopener" target="_blank" title="Deploy Protocol">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 3: Style C (Dark black container from Positivus reference) -->
+<article class="project-card flex flex-col justify-between bg-[#191a23] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all text-white" data-category="HARDWARE_ROBOTICS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md">
+                    ROBOTICS &amp; HARDWARE
+                  </span>
+<span class="font-mono text-xs font-bold text-white bg-[#292a32] px-2 py-0.5 rounded border border-white/20">
+                    PROTOTYPE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#b9ff66] mb-1">SYS_ID // RPBX-HW-AGRIBOT-03</div>
+<h3 class="font-display text-2xl font-bold uppercase text-white">ESP32 Fertilizer Spraying Robot</h3>
+<p class="font-mono text-xs text-white/70 mt-1">PURPOSE: Autonomous 4WD Precision Agricultural Dispenser</p>
+</div>
+<p class="font-body text-xs text-white/80 leading-relaxed">
+                  Microcontroller-driven agricultural chassis featuring four-wheel motor synchronized drive, ultrasonic obstacle avoidance, high-pressure pump relay triggering, and browser-hosted WebSocket controls.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">ESP32 Dual-Core</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">C++ Firmware</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">WebSockets</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">Sonar Array</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-white/15">
+<span class="font-mono text-[11px] text-[#b9ff66] font-bold">HARDWARE TEST: PASS</span>
+<a class="w-10 h-10 rounded-full bg-[#b9ff66] text-[#191a23] flex items-center justify-center hover:bg-white transition-all" href="https://wa.me/919510477366?text=Technical%20Inquiry:%20ESP32%20Spraying%20Robot%20Specs" rel="noopener" target="_blank" title="Tech Specs">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 4: Style A (White/Grey) -->
+<article class="project-card flex flex-col justify-between bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="MOBILE_APPS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    MOBILE APPLICATIONS
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    IN DEV
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/60 mb-1">SYS_ID // RPBX-MOB-KAAM-04</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">KaamMitra Platform</h3>
+<p class="font-mono text-xs text-[#191a23]/80 mt-1">PURPOSE: Hyperlocal Laborer &amp; Contractor Matching Network</p>
+</div>
+<p class="font-body text-xs text-[#191a23]/80 leading-relaxed">
+                  Lightweight mobile portal bridging skilled daily wage workers and local employers with zero middlemen. Geolocation tracking, phone verification, and bilingual voice-first accessibility layers.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Android</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Flutter / Dart</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Firebase Auth</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Cloud DB</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23]/70 font-bold">SPRINT: 04 // ACTIVE REPO</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-[#b9ff66] flex items-center justify-center hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry:%20KaamMitra%20Development%20Pipeline" rel="noopener" target="_blank" title="Roadmap">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 5: Style B (Electric Lime) -->
+<article class="project-card flex flex-col justify-between bg-[#b9ff66] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="WEB_PLATFORMS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-white text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    WEBSITES &amp; WEB APPLICATIONS
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    LIVE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/70 mb-1">SYS_ID // RPBX-WEB-CORE-05</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">ROBOPIX Official Platform</h3>
+<p class="font-mono text-xs text-[#191a23] font-semibold mt-1">PURPOSE: Mission Critical Digital Avionics &amp; Systems Hub</p>
+</div>
+<p class="font-body text-xs text-[#191a23] leading-relaxed">
+                  The flagship client portal presenting real-time telemetry, consult scheduling matrices, and verified architectural standards engineered with ultra-high contrast dark monochrome discipline.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">HTML5</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Tailwind CSS</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Vanilla JS</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Cloudflare Edge</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23] font-bold">RUNTIME: CURRENT SESSION</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-white flex items-center justify-center hover:bg-white hover:text-[#191a23] border border-[#191a23] transition-all" href="#" title="Root Node">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 6: Style C (Dark black) -->
+<article class="project-card flex flex-col justify-between bg-[#191a23] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all text-white" data-category="WEB_PLATFORMS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md">
+                    WEBSITES &amp; WEB APPLICATIONS
+                  </span>
+<span class="font-mono text-xs font-bold text-white bg-[#292a32] px-2 py-0.5 rounded border border-white/20">
+                    LIVE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#b9ff66] mb-1">SYS_ID // RPBX-WEB-INSPECT-06</div>
+<h3 class="font-display text-2xl font-bold uppercase text-white">HTML Viewer Tool</h3>
+<p class="font-mono text-xs text-white/70 mt-1">PURPOSE: Zero-Latency DOM Sandbox &amp; Render Inspector</p>
+</div>
+<p class="font-body text-xs text-white/80 leading-relaxed">
+                  Lightweight browser-native utility allowing web developers to quickly parse, scrub, and validate raw markup structures without external bloated tooling or tracking overhead.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">JavaScript ES6</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">HTML5 Canvas</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">CSS Grid</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">Sandbox</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-white/15">
+<span class="font-mono text-[11px] text-[#b9ff66] font-bold">IN PRODUCTION</span>
+<a class="w-10 h-10 rounded-full bg-[#b9ff66] text-[#191a23] flex items-center justify-center hover:bg-white transition-all" href="https://wa.me/919510477366?text=Inquiry:%20HTML%20Viewer%20Integration" rel="noopener" target="_blank" title="Inspect App">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 7: Style A (White/Grey) -->
+<article class="project-card flex flex-col justify-between bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="WEB_PLATFORMS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    WEBSITES &amp; WEB APPLICATIONS
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    LIVE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/60 mb-1">SYS_ID // RPBX-WEB-PADTEST-07</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">Gamepad Tester Suite</h3>
+<p class="font-mono text-xs text-[#191a23]/80 mt-1">PURPOSE: Hardware Input Signal &amp; Stick Drift Diagnostic</p>
+</div>
+<p class="font-body text-xs text-[#191a23]/80 leading-relaxed">
+                  Web Gamepad API diagnostic platform registering raw axis variance, analog dead zones, actuation pressure thresholds, and rumble motor latency checks across USB &amp; Bluetooth controllers.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Gamepad API</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">WebGL</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">JavaScript</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Ticks</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23]/70 font-bold">LATENCY: &lt;1.2MS</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-[#b9ff66] flex items-center justify-center hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry:%20Gamepad%20Diagnostic%20Engine" rel="noopener" target="_blank" title="Test Hardware">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 8: Style B (Lime) -->
+<article class="project-card flex flex-col justify-between bg-[#b9ff66] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="WEB_PLATFORMS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-white text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    WEBSITES &amp; WEB APPLICATIONS
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    PROTOTYPE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/70 mb-1">SYS_ID // RPBX-WEB-CONST-08</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">Construction Enterprise Suites</h3>
+<p class="font-mono text-xs text-[#191a23] font-semibold mt-1">PURPOSE: Heavy Equipment &amp; Infrastructure Showcase</p>
+</div>
+<p class="font-body text-xs text-[#191a23] leading-relaxed">
+                  Engineered web architectures designed specifically for civil engineering firms, contractor aggregators, and architectural studios featuring blueprint viewers and structured procurement workflows.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">HTML5</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">CSS3</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Responsive</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Lead Forms</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23] font-bold">CIVIL TEMPLATE DEPLOY</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-white flex items-center justify-center hover:bg-white hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry:%20Construction%20Web%20Suites" rel="noopener" target="_blank" title="View Archives">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 9: Style C (Dark black) -->
+<article class="project-card flex flex-col justify-between bg-[#191a23] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all text-white" data-category="AI_ASSISTANTS">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md">
+                    AI ASSISTANTS
+                  </span>
+<span class="font-mono text-xs font-bold text-white bg-[#292a32] px-2 py-0.5 rounded border border-white/20">
+                    PROTOTYPE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#b9ff66] mb-1">SYS_ID // RPBX-AI-JARVIS-09</div>
+<h3 class="font-display text-2xl font-bold uppercase text-white">Jarvis Voice AI Engine</h3>
+<p class="font-mono text-xs text-white/70 mt-1">PURPOSE: Voice Command &amp; Automation Hub</p>
+</div>
+<p class="font-body text-xs text-white/80 leading-relaxed">
+                  Desktop voice control environment combining offline Speech-to-Text parsing, natural language intent translation, and automated OS task triggers (app spawning, search execution, file queries).
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">Python 3.11</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">PyAudio</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">SpeechRecog</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-[#292a32] rounded-md text-white border border-white/10">OS Hooks</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-white/15">
+<span class="font-mono text-[11px] text-[#b9ff66] font-bold">VOICE RECOG: ACTIVE LAB</span>
+<a class="w-10 h-10 rounded-full bg-[#b9ff66] text-[#191a23] flex items-center justify-center hover:bg-white transition-all" href="https://wa.me/919510477366?text=Inquiry:%20Jarvis%20AI%20Voice%20Architecture" rel="noopener" target="_blank" title="Voice Specs">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 10: Style A (White/Grey) -->
+<article class="project-card flex flex-col justify-between bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-6 shadow-brutal hover:translate-y-[-2px] transition-all" data-category="PRODUCTIVITY_EXPERIMENTAL">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-block bg-[#b9ff66] text-[#191a23] font-display text-xs font-bold px-3 py-1 rounded-md border border-[#191a23]">
+                    PRODUCTIVITY &amp; LABS
+                  </span>
+<span class="font-mono text-xs font-bold text-[#191a23] bg-white px-2 py-0.5 rounded border border-[#191a23]">
+                    PROTOTYPE
+                  </span>
+</div>
+<div>
+<div class="font-mono text-[11px] text-[#191a23]/60 mb-1">SYS_ID // RPBX-PRD-ALARM-10</div>
+<h3 class="font-display text-2xl font-bold text-[#191a23] uppercase">RememberMe Spoken Alarm</h3>
+<p class="font-mono text-xs text-[#191a23]/80 mt-1">PURPOSE: Voice-Synthesized Schedule &amp; Interval Scheduler</p>
+</div>
+<p class="font-body text-xs text-[#191a23]/80 leading-relaxed">
+                  Iterative productivity client engineered to eliminate overlooked task alarms through repeated auditory speech alerts, recurring sequence timers, and persistent system tray status monitoring.
+                </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Python</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Tkinter / Qt</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">TTS Speech</span>
+<span class="font-mono text-[11px] px-2 py-0.5 bg-white border border-[#191a23] rounded-md text-[#191a23]">Scheduler</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-[#191a23]/20">
+<span class="font-mono text-[11px] text-[#191a23]/70 font-bold">AUDIO CRON: VERIFIED</span>
+<a class="w-10 h-10 rounded-full bg-[#191a23] text-[#b9ff66] flex items-center justify-center hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all" href="https://wa.me/919510477366?text=Inquiry:%20RememberMe%20Productivity%20System" rel="noopener" target="_blank" title="Run Routine">
+<span class="material-symbols-outlined text-lg">arrow_outward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Hardware & Repo Compliance Audit Table Section -->
+<section class="max-w-7xl mx-auto px-6 py-10 w-full">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<div class="inline-flex self-start items-center gap-2 bg-[#b9ff66] text-[#191a23] px-3 py-1 rounded-md text-xs font-display font-bold border border-[#191a23]">
+              FIELD TESTING REPORT // LOG ENTRY 0984
+            </div>
+<h2 class="font-display text-3xl font-bold uppercase tracking-tight text-[#191a23]">
+              Hardware &amp; Repo Compliance Audit
+            </h2>
+</div>
+<!-- Structured High-Contrast Clean Table -->
+<div class="w-full overflow-x-auto bg-white border-2 border-[#191a23] rounded-3xl p-2 shadow-brutal">
+<table class="w-full text-left font-body text-xs text-[#191a23]">
+<thead class="bg-[#191a23] text-white font-display text-xs uppercase tracking-wider rounded-2xl">
+<tr>
+<th class="p-4 rounded-l-2xl font-bold">SYSTEM ID</th>
+<th class="p-4 font-bold">PROJECT CODE</th>
+<th class="p-4 font-bold">TARGET ARCHITECTURE</th>
+<th class="p-4 font-bold">PRIMARY PROTOCOL</th>
+<th class="p-4 font-bold">DEPLOYMENT TIER</th>
+<th class="p-4 rounded-r-2xl font-bold text-right">COMM CHANNEL</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#191a23]/10 font-mono">
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-01</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">AI Lead Finder</td>
+<td class="p-4 text-[#191a23]/80">Python / REST API Pipelines</td>
+<td class="p-4 text-[#191a23]/80">Data Extraction &amp; Validation</td>
+<td class="p-4"><span class="bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">LIVE</span></td>
+<td class="p-4 text-right text-[#191a23] font-bold">+91 9510477366</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-02</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">AI Outreach Tool</td>
+<td class="p-4 text-[#191a23]/80">Python / WhatsApp Meta Gateway</td>
+<td class="p-4 text-[#191a23]/80">Direct Client Dispatch</td>
+<td class="p-4"><span class="bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">LIVE</span></td>
+<td class="p-4 text-right text-[#191a23] font-bold">+91 9510477366</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-03</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">ESP32 Fertilizer Bot</td>
+<td class="p-4 text-[#191a23]/80">Xtensa LX6 / H-Bridge Driver</td>
+<td class="p-4 text-[#191a23]/80">Browser UI / Sonar Telemetry</td>
+<td class="p-4"><span class="bg-[#f3f3f3] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">PROTOTYPE</span></td>
+<td class="p-4 text-right text-[#191a23]/70">LOCAL_AP // VERIFIED</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-04</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">KaamMitra Platform</td>
+<td class="p-4 text-[#191a23]/80">Flutter / Firebase Geo-Index</td>
+<td class="p-4 text-[#191a23]/80">Worker Direct Connect</td>
+<td class="p-4"><span class="bg-[#f3f3f3] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">IN DEV</span></td>
+<td class="p-4 text-right text-[#191a23]/70">STAGING CLOUD</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-05</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">ROBOPIX Platform</td>
+<td class="p-4 text-[#191a23]/80">Tailwind CSS / Core ES6</td>
+<td class="p-4 text-[#191a23]/80">Aerospace Web Engine</td>
+<td class="p-4"><span class="bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">LIVE</span></td>
+<td class="p-4 text-right text-[#191a23] font-bold">GLOBAL EDGE</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-06</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">HTML Viewer</td>
+<td class="p-4 text-[#191a23]/80">Vanilla JS Sandbox Engine</td>
+<td class="p-4 text-[#191a23]/80">Client-Side DOM Parse</td>
+<td class="p-4"><span class="bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">LIVE</span></td>
+<td class="p-4 text-right text-[#191a23] font-bold">ACTIVE WEB</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-07</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">Gamepad Tester</td>
+<td class="p-4 text-[#191a23]/80">W3C Gamepad API Interface</td>
+<td class="p-4 text-[#191a23]/80">Hardware Input Diagnostics</td>
+<td class="p-4"><span class="bg-[#b9ff66] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">LIVE</span></td>
+<td class="p-4 text-right text-[#191a23] font-bold">LOW LATENCY</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-08</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">Civil / Construction</td>
+<td class="p-4 text-[#191a23]/80">Modern Enterprise Web Stack</td>
+<td class="p-4 text-[#191a23]/80">Equipment &amp; Work Matrices</td>
+<td class="p-4"><span class="bg-[#f3f3f3] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">PROTOTYPE</span></td>
+<td class="p-4 text-right text-[#191a23]/70">CLIENT REPO</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-09</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">Jarvis AI Assistant</td>
+<td class="p-4 text-[#191a23]/80">Python / PyAudio / OS Hooks</td>
+<td class="p-4 text-[#191a23]/80">Voice Command Interface</td>
+<td class="p-4"><span class="bg-[#f3f3f3] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">PROTOTYPE</span></td>
+<td class="p-4 text-right text-[#191a23]/70">DESKTOP LOCAL</td>
+</tr>
+<tr class="hover:bg-[#f3f3f3] transition-colors">
+<td class="p-4 font-bold text-[#191a23]">RPBX-10</td>
+<td class="p-4 font-display font-bold text-[#191a23] uppercase">RememberMe Alarm</td>
+<td class="p-4 text-[#191a23]/80">Python / Synthesizer Cron</td>
+<td class="p-4 text-[#191a23]/80">Auditory Speech Scheduling</td>
+<td class="p-4"><span class="bg-[#f3f3f3] text-[#191a23] font-bold px-2 py-0.5 rounded border border-[#191a23] text-[10px]">PROTOTYPE</span></td>
+<td class="p-4 text-right text-[#191a23]/70">SYS CRON DAEMON</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Technical Inquiry & Founder Consultation Protocol Banner (Positivus CTA card style) -->
+<section class="max-w-7xl mx-auto px-6 py-12 w-full">
+<div class="bg-[#f3f3f3] border-2 border-[#191a23] rounded-3xl p-8 lg:p-12 shadow-brutal flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+<div class="flex flex-col gap-3 max-w-2xl">
+<span class="inline-flex self-start items-center gap-2 bg-[#b9ff66] text-[#191a23] px-3 py-1 rounded-md text-xs font-display font-bold border border-[#191a23]">
+              SYSTEMS ARCHITECTURE BRIEFINGS
+            </span>
+<h2 class="font-display text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#191a23]">
+              Initiate a verified technical engagement
+            </h2>
+<p class="font-body text-[#191a23]/80 leading-relaxed text-sm sm:text-base">
+              Connect directly with Vishwam Patel for project scoping, embedded hardware prototyping, or production AI integration workflows. Transparent timelines, rigorous testing, and direct engineering accountability.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto">
+<a class="px-6 py-4 rounded-2xl bg-[#191a23] text-[#b9ff66] font-display text-sm font-bold uppercase tracking-wider hover:bg-[#b9ff66] hover:text-[#191a23] border border-[#191a23] transition-all shadow-brutal flex items-center justify-center gap-2 text-center" href="https://wa.me/919510477366?text=Hello%20Vishwam,%20I%20would%20like%20to%20schedule%20a%20technical%20consultation%20with%20ROBOPIX." rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-base">chat</span>
+<span class="">WHATSAPP: +91 9510477366</span>
+</a>
+<a class="px-6 py-4 rounded-2xl bg-white text-[#191a23] font-display text-sm font-bold uppercase tracking-wider hover:bg-[#f3f3f3] border-2 border-[#191a23] transition-all shadow-brutal flex items-center justify-center gap-2 text-center" href="tel:+919510477366">
+<span class="material-symbols-outlined text-base">call</span>
+<span class="">VOICE LINK</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Category filter script -->
+<script>
+      function filterCategory(targetCategory) {
+        const cards = document.querySelectorAll('.project-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        buttons.forEach(btn => {
+          btn.classList.remove('bg-[#191a23]', 'text-[#b9ff66]', 'shadow-[2px_2px_0_0_#191a23]');
+          btn.classList.add('bg-white', 'text-[#191a23]', 'border', 'border-[#191a23]');
+        });
+
+        if (window.event && window.event.currentTarget) {
+          const current = window.event.currentTarget;
+          current.classList.remove('bg-white', 'text-[#191a23]');
+          current.classList.add('bg-[#191a23]', 'text-[#b9ff66]', 'shadow-[2px_2px_0_0_#191a23]');
+        }
+
+        cards.forEach(card => {
+          if (targetCategory === 'ALL' || card.getAttribute('data-category') === targetCategory) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
+</main>
+<!-- Footer (Dark neo-grotesque block) -->
+<footer class="w-full bg-[#191a23] text-white mt-12 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gtOkXD8OQcbU4K7K59YkOOopS_syv7ouXnU-SY_cGYu13fKvd14th_yiFZ6IgSxkcdLczXcSy9mD8yfsEMmYIypuXXgDMgSwuV6QUum1IuE5Wd1Q3D_Gj74i1cQ_74QnL1WkWwIrUwDoBtd1oT5oWJOyif3XcJQM4aJUTMFH2cpuNnuA8gcfizdvrkO5m4LfHUjl6kzeiyf2luhjjzePtvsP9zb-OQmwpMFgQ7DKuI_mts5S0OlHqSLyHXNGigJwJw" alt="ROBOPIX Logo" class="h-10 w-auto object-contain rounded-md bg-white p-1"></div>
+<div class="font-mono text-xs text-[#b9ff66] uppercase">BEYOND THE POSSIBLE</div>
+<p class="font-body text-xs text-white/70 max-w-xs leading-relaxed">
+            High-reliability autonomous frameworks, industrial robotics architecture, and mission-critical engineering solutions.
+          </p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-display font-bold text-sm text-[#b9ff66] uppercase tracking-wider mb-2">OPERATIONAL MATRICES</div>
+<a class="font-body text-xs text-white/70 hover:text-white transition-colors" data-path="services" href="#">Autonomous Robotics</a>
+<a class="font-body text-xs text-white/70 hover:text-white transition-colors" data-path="solutions" href="#">Vision Processing</a>
+<a class="font-body text-xs text-white/70 hover:text-white transition-colors" data-path="about-projects" href="#">Mission Projects</a>
+<a class="font-body text-xs text-white/70 hover:text-white transition-colors" data-path="process" href="#">Deployment Protocol</a>
+</div>
+<div class="flex flex-col gap-2">
+<div class="font-display font-bold text-sm text-[#b9ff66] uppercase tracking-wider mb-2">COMMUNICATION LINK</div>
+<div class="font-mono text-xs text-white font-bold">TEL: +91 9510477366</div>
+<a class="font-mono text-xs text-[#b9ff66] hover:underline" href="https://wa.me/919510477366" rel="noopener" target="_blank">[WHATSAPP COMMS]</a>
+<div class="font-mono text-[11px] text-white/60 uppercase mt-2">BASE: BANGALORE / HYDERABAD / GUJARAT</div>
+</div>
+<div class="flex flex-col gap-2 font-mono text-xs">
+<div class="font-display font-bold text-sm text-[#b9ff66] uppercase tracking-wider mb-2">TELEMETRY LOG</div>
+<div class="text-white/70">STATION: AP-SOUTH-1</div>
+<div class="text-white/70">UPTIME: 99.998% ACTIVE</div>
+<div class="text-[#b9ff66]">SEC_CHANNEL: TLS_v1.3_STRICT</div>
+<div class="text-white/50 mt-1">FLAG // VERIFIED ENTITY</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/60">
+<div class="">© 2025 ROBOPIX ENGINEERING SYSTEMS. ALL RIGHTS RESERVED.</div>
+<div class="text-[#b9ff66]">SYS-REF: ROBOPIX-NODE-01 // PRODUCTION</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

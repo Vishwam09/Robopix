@@ -1,0 +1,6 @@
+{
+  "name": "ROBOPIX — Minimalist Tech Portfolio & Systems Gallery",
+  "description": "A minimalist, neo-grotesque portfolio and engineering systems gallery showcasing autonomous robotics, AI automation, firmware, and mission-critical web platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
